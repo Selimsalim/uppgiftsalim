@@ -1,0 +1,289 @@
+.header {
+    background-color: white;
+
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 4vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    padding: 1.3em;
+    border: 0px;
+    border-bottom: 2px;
+    border-style: solid;
+    border-color: rgb(211, 212, 221);
+}
+
+.img {
+    width: 40px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    justify-content: center;
+
+}
+
+.buttons a {
+    text-decoration: none;
+    color: red;
+    margin-right: 1vw;
+
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 2px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 20px 8px 20px;
+
+    transition: background-color 0.4s, color 0.4s, opacity 0.3s;
+}
+
+.buttons a:hover {
+    background-color: rgb(27, 26, 26);
+    color: white;
+
+}
+
+.buttons a:active {
+    opacity: 0.6;
+}
+
+* {
+    font-family: 'Open Sans';
+}
+
+body {
+    background-color: rgb(231, 228, 228);
+    margin: 0;
+    margin-top: 10vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: ".main .sidebar";
+}
+
+.main {
+    background-color: white;
+    padding-bottom: 10px;   
+    border-radius: 4px;
+}
+
+
+
+.sidebar {
+    background-color: white;
+}
+
+.my-pic {
+    width: 100%;
+    margin-top: 4vh;
+}
+
+.page-cv {
+    display: grid;
+    grid-template-columns: 3fr auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header-cv picture-cv"
+    "main-cv contact-cv"
+    "main-cv sidebar-cv";
+}
+
+.page-cv h1 {
+    padding: 0;
+    padding-top: 2vw;
+    padding-left: 2vw;
+    margin: 0;
+}
+
+.page-cv p {
+    padding-right: 5px;
+}
+
+.header-cv {
+    grid-area: header-cv;
+    display: flex;
+}
+
+.picture-cv {
+    grid-area: picture-cv;
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+}
+
+.portrait-cv {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.contact-cv p {
+    padding: 0;
+}
+
+.question {
+    font-weight: 700;
+}
+
+.main-cv {
+    grid-area: main-cv;
+}
+
+.sidebar-cv {
+    grid-area: sidebar-cv;
+}
+
+.sidebar-cv h2 {
+    padding-right: 4px;
+}
+
+.sidebar-cv p {
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar h2 {
+    size: 0.8em;
+}
+
+.project-link {
+    color: red;
+    background-color: white;
+    margin-top: 8px;
+    border-style: solid;
+    border-color: red;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    display: block;
+    transition: background-color 0.4s, color 0.4s, opacity 0.4;;
+}
+
+.project-link:hover {
+    background-color: black;
+    color: white;
+}
+
+.project-link:active {
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 1100px) {
+    
+    body {
+        margin-right: 5vw;
+        margin-left: 5vw;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    
+    body {
+        margin-top: 16vh;
+        margin: 0;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 1vh;
+        height: 14vh;
+    }
+
+    .buttons {
+        margin: 1em;
+    }
+
+    .img {
+        display: inline-flex; 
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width: 560px) {
+    
+    body {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "header" "page";
+        margin: 0;
+        height: auto;
+        
+    }
+
+    .header {
+        position: relative;
+        margin-bottom: 0vh;
+        height: 35vh;
+    }
+
+    .buttons {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons a {
+        width: 20%;
+        margin: 0;
+        margin-left: 0;
+        margin-right: 0;
+        justify-content: center;
+        margin-bottom: 0.4em;
+    }
+
+    .page {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    html {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .my-pic {
+        width: 70vw;
+    }
+
+    .header {
+        width: 90vw;
+    }
+
+    .main {
+        font-size: 6vw;
+        
+    }
+
+    #portfolio-target p{
+        width: 100vw;
+    }
+
+}
